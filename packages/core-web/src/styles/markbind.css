@@ -1,3 +1,29 @@
+/* styles for scrollbar */
+
+::-webkit-scrollbar {
+    background-color: #fff;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #808080;
+    border-radius: 14px;
+    border: 1px solid #fff;
+}
+
+/*
+	Media query to prevent button hover effect on devices
+	that do not have hover capabilities. This is to
+	prevent scrollbar style from getting 'stucked'
+	due to button hover on mobile view.
+*/
+
+@media (hover: hover) {
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #212529;
+    }
+}
+
 :root {
     --sticky-header-height: 0;
 }
